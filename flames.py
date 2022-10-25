@@ -6,6 +6,8 @@ from banner import banner
 from colorama import Fore, Back, Style
 from colorama import init
 from termcolor import colored
+import base64
+
 banner()
 
 your_name = str(input(colored('ENTER YOUR NAME:', 'yellow')))
@@ -16,7 +18,12 @@ names = []
 names.append(your_name)
 names.append(partner_name)
 
-API_KEY = "ck9EcFVFWJR5fnlntLEBTceHpkMsAlzHgHHU"
+
+api = b'ck9EcFVFWJR5fnlntLEBTceHpkMsAlzHgHHU'
+
+
+API_KEY = api.decode("ascii") 
+
 
 #........Gender API...............to Find The Gender.......
 
